@@ -1,0 +1,20 @@
+
+
+>>>Results of repitition 26:<<<
+Distance Grid [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+Kernel: Matern52
+Sharing mode: immediate_aa
+Iterations: 100
+Backend: None
+Number of initial points: 30
+Initial acquisition weight: 1
+Acqisition decrease rate: 1
+Device: None
+Conv. Crit.: 0.001
+Involved atoms: ['H', 'H']
+Ansatz:
+     ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+q_0: ┤ R(theta[0],π/2) ├──■──┤ R(theta[2],π/2) ├──■──┤ R(theta[4],π/2) ├
+     ├─────────────────┤┌─┴─┐├─────────────────┤┌─┴─┐├─────────────────┤
+q_1: ┤ R(theta[1],π/2) ├┤ X ├┤ R(theta[3],π/2) ├┤ X ├┤ R(theta[5],π/2) ├
+     └─────────────────┘└───┘└─────────────────┘└───┘└─────────────────┘
