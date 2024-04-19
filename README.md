@@ -9,21 +9,21 @@ The main algorithm can be found in the function "iBOIS" in the file "BOIS_based_
 
 ## Installation
 
-   - Get yourself an [IBM Quantum account](https://quantum.ibm.com/) (There exists a free plan but with it you can access only part of this scrips functionality).
+   - Get yourself an [IBM Quantum account](https://quantum.ibm.com/) (There exists a free plan but with it you can access only part of this scrips functionality). Put the (free plan) token in line 1062.
    - Place the Python files in a directory with a subdirectory "results".
    - Run 
         ```
         conda create --name ENV_iBOIS --file package-list.txt
         ```
      to replicate the environment the code was written in (or install the necessary packages manually). 
-   - Insert your IBM token with access to Ehningen (if available) in line ???.
-   - Insert your IBM token with access to the other IBM devices (if available) in line ??? and ???.
+   - Insert your IBM token with access to Ehningen (if available) in line 1112.
+   - Insert your IBM token with access to the other IBM devices (if available) in line 1062 and 1122.
 
    Test the installation by running: 
    - "python BOIS_based_VQE.py 1 immediate_aa Matern52 no H2" for local calculation.
    - "nohup python BOIS_based_VQE.py 1 immediate_aa Matern52 FakeLima H2 >> test_connection.out &" for testing the connection to IBM runtime (due to queuing this might take some time).
 
-   (Note: Before changing "load_initp" to TRUE, make sure that reference folder (line ??? and ???) contains an output file with the corresponding repetition number.)
+   (Note: Before changing "load_initp" to TRUE, make sure that reference folder (line 631 and 724) contains an output file with the corresponding repetition number.)
 
 ## Usage
 
