@@ -281,33 +281,47 @@ def extract_initp_from_outfile(reference_folder, repetition_nr):
 
 
 def evaluate_paulis_outside(paulislist, ansatz, estimator, param_vals, cfo, shots=None):
+    """
+    Evaluates the expectation values of a list of Pauli operators for a given quantum circuit ansatz and parameter values 
+    outside of the cost function object.
 
+    Args:
+        paulislist (list): A list of Pauli operator strings (e.g., ['X', 'YZ', 'I']) to be evaluated.
+        ansatz (QuantumCircuit): The quantum circuit ansatz to be used for the evaluation.
+        estimator (QuantumEstimator): The quantum estimator object used to run the circuits and measure the observables.
+        param_vals (numpy.ndarray): The parameter values to be assigned to the circuit ansatz. Differnt dimensions are accepted for compatibility with the GPyOpt module.
+        cfo (object): Const function object in which the number of job evaluations needs to be updated.
+        shots (int, optional): The number of shots to use for the quantum circuit execution. If not provided, the estimator's default shots will be used.
 
-        if param_vals.ndim == 2:
-            paradic = {ansatz.parameters[i]: param_vals[:,i][0] for i in range(len(self.ansatz.parameters))}
-        else:
-            assert len(param_vals) == len(ansatz.parameters)  
-            paradic = {ansatz.parameters[i]: param_vals[i] for i in range(len(param_vals))}
+    Returns:
+        list: A list of the expected values of the Pauli operators for the given parameter values.
+    """
 
-        state = ansatz.assign_parameters(paradic)
+    if param_vals.ndim == 2:
+        paradic = {ansatz.parameters[i]: param_vals[:,i][0] for i in range(len(self.ansatz.parameters))}
+    else:
+        assert len(param_vals) == len(ansatz.parameters)  
+        paradic = {ansatz.parameters[i]: param_vals[i] for i in range(len(param_vals))}
 
-        observables = []
-        for i in range(len(paulislist)):
-            observables.append(SparsePauliOp(paulislist[i]))
+    state = ansatz.assign_parameters(paradic)
 
-        observables_tuple=tuple(observables)
-        circuits = tuple([state for i in range(len(observables))])
+    observables = []
+    for i in range(len(paulislist)):
+        observables.append(SparsePauliOp(paulislist[i]))
 
-        if shots == None:
-            result = estimator.run(circuits, observables_tuple).result()
-        else:
-            result = estimator.run(circuits, observables_tuple, shots=shots).result()
+    observables_tuple=tuple(observables)
+    circuits = tuple([state for i in range(len(observables))])
 
-        additional_job_evals = len(observables)
-        cfo.num_job_evals += additional_job_evals
-        exp_vals = result.values.tolist()
+    if shots == None:
+        result = estimator.run(circuits, observables_tuple).result()
+    else:
+        result = estimator.run(circuits, observables_tuple, shots=shots).result()
 
-        return exp_vals
+    additional_job_evals = len(observables)
+    cfo.num_job_evals += additional_job_evals
+    exp_vals = result.values.tolist()
+
+    return exp_vals
 
 
 class ObjectiveFunction:
