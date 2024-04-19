@@ -53,6 +53,12 @@ Some specifications are passed to the code in form of command line arguments in 
 
 5. molecule_name: "H2" or "H2O"
 
+## Remarks on the convergence criterion
+
+Choosing a fixed number of iterations $n_{max}$ for the Bayesian optimisation is the default stopping criterion in standard implementations such as GPyOpt. More elaborate stopping criteria exist, but are not the focus of this work. Instead, the objective was to determine the quantum computing (QC) demand that is needed to get sufficiently close to the exact Variational Quantum Eigensolver (VQE) solution. For this purpose, the calculation was stopped when the relative deviation from the reference was smaller than a predefined value. 
+
+For the $\text{H}_2$ molecule, $10^{-3}$ was chosen as this value, which is loosely oriented on the concept of "chemical accuracy" (as the absolute values of the energies are around 1 Hartree). In the subsequent $\text{H}_2\text{O}$ experiments, this accuracy could not be reached within a reasonable number of iterations, which is why $2\cdot10^{-3}$ was chosen as a convergence criterion, instead.
+
 ## License
 
 ## Data
