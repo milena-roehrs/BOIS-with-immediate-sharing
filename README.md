@@ -57,7 +57,7 @@ Some specifications are passed to the code in form of command line arguments in 
 
 ## Data
 
-The raw data output of the numerical experiments for the $$H_2$$ and $$H_2O$$ molecule can be found in the folders "H2_raw_data" and "H2O_raw_data" respectively which include subfolders which are each associated with one of the subsections in the "Results and Discussion" section of the paper.
+The raw data output of the numerical experiments for the $H_2$ and $H_2O$ molecule can be found in the folders "H2_raw_data" and "H2O_raw_data" respectively which include subfolders which are each associated with one of the subsections in the "Results and Discussion" section of the paper.
 
 ## Contact
 
