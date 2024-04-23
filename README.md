@@ -61,6 +61,19 @@ For the $\text{H}_2$ molecule, $10^{-3}$ was chosen as this value, which is loos
 
 ## License
 
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see [https://www.gnu.org/licenses/](https://www.gnu.org/licenses/gpl-3.0.txt).
+
 ## Data
 
 The raw data output of the numerical experiments for the $H_2$ and $H_2O$ molecule can be found in the folders "H2_raw_data" and "H2O_raw_data" respectively which include subfolders which are each associated with one of the subsections in the "Results and Discussion" section of the paper.
