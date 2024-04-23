@@ -1150,6 +1150,7 @@ def setup_quantum_calculation(backend_str):
 
 
 if __name__ == "__main__":
+    print("BOIS-with-immediate-sharing Copyright (C) 2024  Milena Röhrs\nThis program comes with ABSOLUTELY NO WARRANTY; for details check out the LICENSE file.\nThis is free software, and you are welcome to redistribute it\nunder certain conditions; for details check out the LICENSE file.")
     print("Start calculation")
     repetition_nr = sys.argv[1]  
     sharing_mode= sys.argv[2] # choose from: "all-to-all-sharing", "no", "immediate_aa", "NN", "immediate_NN"
