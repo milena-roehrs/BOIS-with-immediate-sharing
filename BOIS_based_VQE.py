@@ -1,9 +1,23 @@
 '''
+This program implements the variational quantum eigensolver (VQE) algorithm based on Bayesian optimisation (BO) with different types of information sharing allowing "immediate sharing".
+Copyright (C) 2024  Milena Röhrs
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 This code is written for the bachelor's thesis 
 "Bayesian Optimisation (BO) based VQE for Quantum Chemistry Applications:
 Experiments on Information Sharing and the BO's Surrogate Model" by Milena Röhrs.
-It implements the variational quantum eigensolver (VQE) algorithm based on Bayesian optimisation (BO) with different
-types of information sharing.
 The purpose of this code is to demonstrate the application of BO to optimise the parameters of a quantum circuit in VQE.
 The code was inspired by https://github.com/SheffieldML/GPyOpt/blob/master/manual/GPyOpt_modular_bayesian_optimization.ipynb
 as well as the Paper "Variational quantum algorithm with information sharing" by Self et al. 2021.
