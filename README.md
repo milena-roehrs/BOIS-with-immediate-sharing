@@ -1,5 +1,5 @@
 # BOIS-with-immediate-sharing
-This code was created as part of a bachelor's thesis in the field of mathematics. It extends the [BOIS for VQE](https://doi.org/10.1038/s41534-021-00452-9) algorithm by introducing "immediate sharing" and enabling sharing between geometries whose Hamiltonian are extended in differing sets of Pauli strings.
+This code was created as part of a bachelor's thesis in the field of mathematics. It extends the [BOIS for VQE](https://doi.org/10.1038/s41534-021-00452-9) algorithm by introducing "immediate sharing" and enabling sharing between geometries whose Hamiltonians are extended in differing sets of Pauli strings.
 
 This repository includes the final code of the project as well as the raw data of the numerical experiments the corresponding paper (link added once published) is based on.
 
